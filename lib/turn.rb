@@ -16,6 +16,10 @@ def valid_move?(board, index)
   end
 end
 
+def turn_count(board)
+  board.count{|token| token == "X" || token == "O"}
+end
+
 def position_taken?(board, index)
    board[index] != " " || board[index] != "" || board[index] != niL
   false 
